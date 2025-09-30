@@ -2,6 +2,7 @@ import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { AdminModule } from "./admin/admin.module";
+import { GenreModule } from './genre/genre.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { AdminModule } from "./admin/admin.module";
       autoLoadEntities: true,
     }),
     AdminModule,
+    GenreModule,
   ],
 })
 export class AppModule {}
